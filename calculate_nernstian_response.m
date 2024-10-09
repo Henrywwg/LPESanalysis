@@ -26,10 +26,10 @@ function slope = calculate_nernstian_response(data, concentrations)
         averages(col) = mean(last_50_data);
     end
 
-    % Take the natural log of the concentrations
+    % Take the log10 of the concentrations
     ln_concentrations = log10(concentrations);
 
-    % Plot the averages against ln(concentration)
+    % Plot the averages against log(concentration)
     figure;
     plot(ln_concentrations, averages, 'bo', 'MarkerSize', 3, 'LineWidth', 3);
     title('Response');
